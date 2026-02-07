@@ -9,6 +9,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 
@@ -24,6 +25,7 @@ func main() {
 	defer stop()
 
 	r := gin.Default()
+	r.Use(cors.Default())
 
 	textHandler := slog.NewTextHandler(os.Stdout, nil)
 	logger := l.NewSlogWrapper(slog.New(textHandler))

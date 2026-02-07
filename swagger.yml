@@ -4,7 +4,7 @@ info:
   description: API для управления подписками пользователей и подсчета расходов.
   version: 1.0.0
 servers:
-  - url: http://localhost:8080
+  - url: http://localhost:8081
     description: Local server
 
 paths:
